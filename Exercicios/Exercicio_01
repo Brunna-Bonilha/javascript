@@ -1,0 +1,16 @@
+/*let salario = 10000
+let abono = 1000
+novoSalario = 11000
+
+novoSalario = salario + abono*/
+
+let salario, abono, novoSalario;
+salario = leia.questionFloat("Digito valor do seu salário: ",{limitMessage:"numero real"});
+abono = leia.questionFloat("Digito valor do seu abono: ",{limitMessage:"numero real"});
+novoSalario = salario + abono;
+
+const leia = require('readline-sync')
+
+console.log("\nO valor do novo salário é: " + novoSalario.toFixed(2) + reais);
+
+

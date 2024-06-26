@@ -1,0 +1,32 @@
+/* 
+Grupo 1 
+n1 = 5
+n2 = 6
+n3 = 7 
+n4 = 8 
+Diferença = -26
+ 
+Grupo 2
+n1 = 5
+n2 = 6
+n3 = -7
+n4 = 8
+Diferença = 86
+
+ CALCULO = (n1 * n2) – (n3 * n4)
+
+ */
+
+ const leia = require('readline-sync');
+
+let numero1, numero2, numero3, numero4;
+
+numero1 = leia.questionFloat("Número 1: ");
+numero2 = leia.questionFloat("Número 2: ");
+numero3 = leia.questionFloat("Número 3: ");
+numero4 = leia.questionFloat("Número 4: ");
+
+let diferenca = (numero1 * numero2) - (numero3 * numero4);
+
+console.log("\nA Diferença é: " + diferenca.toFixed(2));
+
