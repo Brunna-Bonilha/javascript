@@ -1,0 +1,42 @@
+const leia = require('readline-sync');
+
+let numero1, numero2;
+let codigoOperacao;
+
+numero1 = leia.questionFloat("Digite o primeiro número: ");
+numero2 = leia.questionFloat("Digite o segundo número: ");
+
+console.log("\nCódigo da Operação");
+console.log("1 - Soma");
+console.log("2 - Subtração");
+console.log("3 - Multiplicação");
+console.log("4 - Divisão");
+
+codigoOperacao = leia.questionInt("\nDigite o código da operação desejada (1 a 4): ");
+
+let resultado;
+
+switch(codigoOperacao) {
+    case 1:
+        resultado = numero1 + numero2;
+        console.log(`\nResultado da Soma: ${resultado}`);
+        break;
+    case 2:
+        resultado = numero1 - numero2;
+        console.log(`\nResultado da Subtração: ${resultado}`);
+        break;
+    case 3:
+        resultado = numero1 * numero2;
+        console.log(`\nResultado da Multiplicação: ${resultado}`);
+        break;
+    case 4:
+        if (numero2 !== 0) {
+            resultado = numero1 / numero2;
+            console.log(`\nResultado da Divisão: ${resultado}`);
+        } else {
+            console.log("\nErro: Divisão por zero!");
+        }
+        break;
+    default:
+        console.log("\nOperação Inválida!");
+}

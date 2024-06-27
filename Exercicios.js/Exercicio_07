@@ -1,0 +1,53 @@
+const leia = require('readline-sync');
+
+let codigo;
+let quantidade;
+
+console.log("\nCódigo do Produto");
+console.log("Cachorro Quente - R$ 10.00");
+console.log("X-Salada - R$ 15.00");
+console.log("X-Bacon - R$ 18.00");
+console.log("Bauru - R$ 12.00");
+console.log("Refrigerante - R$ 8.00");
+console.log("Suco de laranja - R$ 13.00");
+
+codigo = leia.questionInt("\nDigite o código do produto: ");
+quantidade = leia.questionInt("\nDigite a quantidade comprada: ");
+
+let nomeProduto;
+let precoUnitario;
+let valorTotal;
+
+switch(codigo){
+    case 1:
+        nomeProduto = "Cachorro Quente";
+        precoUnitario = 10.00;
+        break;
+    case 2:
+        nomeProduto = "X-Salada";
+        precoUnitario = 15.00;
+        break;
+    case 3:
+        nomeProduto = "X-Bacon";
+        precoUnitario = 18.00;
+        break;
+    case 4:
+        nomeProduto = "Bauru";
+        precoUnitario = 12.00;
+        break;
+    case 5:
+        nomeProduto = "Refrigerante";
+        precoUnitario = 8.00;
+        break;
+    case 6:
+        nomeProduto = "Suco de laranja";
+        precoUnitario = 13.00;
+        break;
+    default:
+        console.log("\nCódigo de produto inválido!");
+        return;
+}
+
+valorTotal = precoUnitario * quantidade;
+
+console.log(`\nVocê comprou ${quantidade} ${nomeProduto}(s) no valor total de R$ ${valorTotal.toFixed(2)}.`);

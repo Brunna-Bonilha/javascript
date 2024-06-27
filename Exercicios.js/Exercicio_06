@@ -1,0 +1,43 @@
+const leia = require('readline-sync');
+
+let caracteristica1 = leia.question("\nDigite a primeira característica (Vertebrado/Invertebrado): ").toLowerCase();
+let caracteristica2 = leia.question("\nDigite a segunda característica (Ave/Mamífero/Inseto/Anelídeo): ").toLowerCase();
+let caracteristica3 = leia.question("\nDigite a terceira característica (Carnívoro/Onívoro/Herbívoro/Hematófago): ").toLowerCase();
+
+let animal;
+
+if (caracteristica1 === "vertebrado") {
+    if (caracteristica2 === "ave") {
+        if (caracteristica3 === "carnívoro") {
+            animal = "Águia";
+        } else if (caracteristica3 === "onívoro") {
+            animal = "Pomba";
+        }
+    } else if (caracteristica2 === "mamífero") {
+        if (caracteristica3 === "onívoro") {
+            animal = "Homem";
+        } else if (caracteristica3 === "herbívoro") {
+            animal = "Vaca";
+        }
+    }
+} else if (caracteristica1 === "invertebrado") {
+    if (caracteristica2 === "inseto") {
+        if (caracteristica3 === "hematófago") {
+            animal = "Pulga";
+        } else if (caracteristica3 === "herbívoro") {
+            animal = "Lagarta";
+        }
+    } else if (caracteristica2 === "anelídeo") {
+        if (caracteristica3 === "hematófago") {
+            animal = "Sanguessuga";
+        } else if (caracteristica3 === "onívoro") {
+            animal = "Minhoca";
+        }
+    }
+}
+
+if (animal) {
+    console.log(`\nO animal escolhido foi: ${animal}`);
+} else {
+    console.log(`\nAs características inválidas.`);
+}

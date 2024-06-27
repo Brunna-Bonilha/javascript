@@ -7,8 +7,6 @@ Salário Liquido = 2800
 SALÁRIO LÍQUIDO = SALÁRIO BRUTO + ADICIONAL NOTURNO + (HORAS EXTRAS * 5) - DESCONTOS
 */
 
-
-
 const leia = require('readline-sync');
 
 let salarioBruto, adicionalNoturno, horasExtras, descontos;
