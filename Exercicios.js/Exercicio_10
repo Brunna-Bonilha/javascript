@@ -1,0 +1,23 @@
+const leia = require('readline-sync');
+
+let idade;
+let menor21 = 0;
+let maior50 = 0;
+let enter = true 
+
+while(enter)    
+    idade = leia.questionInt('Digite a idade:) ');
+
+if (idade >= 0){
+    if(idade < 21){
+        menor21++;
+    } else if (idade > 50){
+        maior50++;
+    } else {
+        enter = false;
+
+    }
+}
+
+console.log(`\nTotal d pessoas com idade menor que 21 anos: ${menor21}`);
+console.log(`\nTotal de pessoas com idade maior que 50 anos: ${maior50}`); 

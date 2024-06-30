@@ -1,36 +1,36 @@
 const leia = require('readline-sync');
 
-let caracteristica1 = leia.question("\nDigite a primeira característica (Vertebrado/Invertebrado): ").toLowerCase();
-let caracteristica2 = leia.question("\nDigite a segunda característica (Ave/Mamífero/Inseto/Anelídeo): ").toLowerCase();
-let caracteristica3 = leia.question("\nDigite a terceira característica (Carnívoro/Onívoro/Herbívoro/Hematófago): ").toLowerCase();
+let caracteristica1 = leia.question("\nDigite a primeira caracteristica (Vertebrado/Invertebrado): ").toLowerCase();
+let caracteristica2 = leia.question("\nDigite a segunda caracteristica (Ave/Mamifero/Inseto/Anelideo): ").toLowerCase();
+let caracteristica3 = leia.question("\nDigite a terceira caracteristica (Carnívoro/Onívoro/Herbívoro/Hematofago): ").toLowerCase();
 
 let animal;
 
 if (caracteristica1 === "vertebrado") {
     if (caracteristica2 === "ave") {
-        if (caracteristica3 === "carnívoro") {
-            animal = "Águia";
-        } else if (caracteristica3 === "onívoro") {
+        if (caracteristica3 === "carnivoro") {
+            animal = "Aguia";
+        } else if (caracteristica3 === "onivoro") {
             animal = "Pomba";
         }
-    } else if (caracteristica2 === "mamífero") {
-        if (caracteristica3 === "onívoro") {
+    } else if (caracteristica2 === "mamifero") {
+        if (caracteristica3 === "onivoro") {
             animal = "Homem";
-        } else if (caracteristica3 === "herbívoro") {
+        } else if (caracteristica3 === "herbivoro") {
             animal = "Vaca";
         }
     }
 } else if (caracteristica1 === "invertebrado") {
     if (caracteristica2 === "inseto") {
-        if (caracteristica3 === "hematófago") {
+        if (caracteristica3 === "hematofago") {
             animal = "Pulga";
-        } else if (caracteristica3 === "herbívoro") {
+        } else if (caracteristica3 === "herbivoro") {
             animal = "Lagarta";
         }
-    } else if (caracteristica2 === "anelídeo") {
-        if (caracteristica3 === "hematófago") {
+    } else if (caracteristica2 === "anelideo") {
+        if (caracteristica3 === "hematofago") {
             animal = "Sanguessuga";
-        } else if (caracteristica3 === "onívoro") {
+        } else if (caracteristica3 === "onivoro") {
             animal = "Minhoca";
         }
     }
@@ -39,5 +39,5 @@ if (caracteristica1 === "vertebrado") {
 if (animal) {
     console.log(`\nO animal escolhido foi: ${animal}`);
 } else {
-    console.log(`\nAs características inválidas.`);
+    console.log(`\nAs caracteristicas invalidas.`);
 }
